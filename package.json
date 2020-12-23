@@ -12,8 +12,8 @@
     "build:app1": "ng build app1 --prod",
     "build:app2": "ng build app2 --prod",
     "build:shared-lib": "ng build shared-lib",
+    "build:all": "npm run build:shell && npm run build:app1 && npm run build:app2",
     "serve:dist": "concurrently \"serve dist/shell -l 5000 -s\" \"serve dist/app1 -l 3000 -s\"  \"serve dist/app2 -l 3000 -s\"",
-    "build": "npm run build:shell && npm run build:app1 && npm run build:app2",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
