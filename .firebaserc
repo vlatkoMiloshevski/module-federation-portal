@@ -1,5 +1,20 @@
 {
   "projects": {
     "default": "module-federation-portal"
+  },
+  "targets": {
+    "module-federation-portal": {
+      "hosting": {
+        "app1": [
+          "microfrontend-1"
+        ],
+        "app2": [
+          "microfrontend-2"
+        ],
+        "shell": [
+          "module-federation-portal"
+        ]
+      }
+    }
   }
 }

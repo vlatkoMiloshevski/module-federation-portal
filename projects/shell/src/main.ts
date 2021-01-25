@@ -5,7 +5,7 @@ let entries = [];
 // ToDo: register local/remote microfrontend apps
 if (environment.production) {
     entries.push([
-        loadRemoteEntry('https://micofontend-1.web.app/remoteEntry.js', 'app1'),
+        loadRemoteEntry('https://microfrontend-1.web.app/remoteEntry.js', 'app1'),
         loadRemoteEntry('https://microfrontend-2.web.app/remoteEntry.js', 'app2')
     ]);
 } else {
