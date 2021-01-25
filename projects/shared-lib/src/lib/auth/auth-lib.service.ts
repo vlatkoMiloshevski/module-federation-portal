@@ -15,7 +15,7 @@ export class AuthLibService {
 
   }
 
-  public login(userName: string, password: string): void {
+  public login(userName: string): void {
     this.userName = userName;
   }
 }

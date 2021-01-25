@@ -17,9 +17,9 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.flightsUrl = this.sanitizer.bypassSecurityTrustResourceUrl(environment.app1Url + '/flights');
-    this.bookingUrl = this.sanitizer.bypassSecurityTrustResourceUrl(environment.app1Url + '/booking');
-    this.cityUrl = this.sanitizer.bypassSecurityTrustResourceUrl(environment.app2Url + '/city');
-    this.countryUrl = this.sanitizer.bypassSecurityTrustResourceUrl(environment.app2Url + '/country');
+    this.flightsUrl = this.sanitizer.bypassSecurityTrustResourceUrl(environment.app1Url + '/convictions');
+    this.bookingUrl = this.sanitizer.bypassSecurityTrustResourceUrl(environment.app1Url + '/claims');
+    this.cityUrl = this.sanitizer.bypassSecurityTrustResourceUrl(environment.app2Url + '/personalDetails');
+    this.countryUrl = this.sanitizer.bypassSecurityTrustResourceUrl(environment.app2Url + '/addonBundles');
   }
 }

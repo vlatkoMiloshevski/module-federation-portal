@@ -3,17 +3,17 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { FlightsModule } from './flights/flights.module';
+import { ConvictionsModule } from './convictions/convictions.module';
 import { APP_ROUTES } from './app.routes';
-import { BookingModule } from './booking/booking.module';
+import { ClaimsModule } from './claims/claims.module';
 import { SharedLibModule } from 'shared-lib';
 
 @NgModule({
   imports: [
     BrowserModule,
     SharedLibModule,
-    FlightsModule,
-    BookingModule,
+    ConvictionsModule,
+    ClaimsModule,
     RouterModule.forRoot(APP_ROUTES)
   ],
   declarations: [

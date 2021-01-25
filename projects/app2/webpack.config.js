@@ -23,8 +23,8 @@ module.exports = {
       filename: "remoteEntry.js",
       exposes: {
         './Component': './projects/app2/src/app/app.component.ts',
-        './CountryModule': './projects/app2/src/app/country/country.module.ts',
-        './CityModule': './projects/app2/src/app/city/city.module.ts',
+        './AddonBundlesModule': './projects/app2/src/app/addonBundles/addonBundles.module.ts',
+        './PersonalDetailsModule': './projects/app2/src/app/personalDetails/personalDetails.module.ts',
       },
 
       // For hosts (please adjust)

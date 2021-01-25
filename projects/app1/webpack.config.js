@@ -23,8 +23,8 @@ module.exports = {
       filename: "remoteEntry.js",
       exposes: {
         './Component': './projects/app1/src/app/app.component.ts',
-        './FlightsModule': './projects/app1/src/app/flights/flights.module.ts',
-        './BookingModule': './projects/app1/src/app/booking/booking.module.ts',
+        './ConvictionsModule': './projects/app1/src/app/convictions/convictions.module.ts',
+        './ClaimsModule': './projects/app1/src/app/claims/claims.module.ts',
       },
 
       // For hosts (please adjust)

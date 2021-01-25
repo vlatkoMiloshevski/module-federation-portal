@@ -5,7 +5,7 @@ import { AuthLibService } from './auth-lib.service';
   selector: 'lib-auth-lib',
   template: `
     <p>
-      Welcome {{username}} | auth service from the shared library
+      Welcome {{username}}
     </p>
   `,
   styles: [
@@ -14,7 +14,7 @@ import { AuthLibService } from './auth-lib.service';
 export class AuthLibComponent implements OnInit {
 
   constructor(private service: AuthLibService) {
-    this.service.login('Vlatko', null);
+    this.service.login('User');
   }
 
   ngOnInit(): void {

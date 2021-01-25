@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { PersonalDetailsComponent } from './personalDetails.component';
 import { RouterModule } from '@angular/router';
-import { FLIGHTS_ROUTES } from './booking.routes';
-import { BookingComponent } from './booking.component';
+import { ROUTES } from './personalDetails.routes';
 import { SharedLibModule } from 'shared-lib';
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forChild(FLIGHTS_ROUTES),
+    RouterModule.forChild(ROUTES),
     SharedLibModule,
   ],
   declarations: [
-    BookingComponent
+    PersonalDetailsComponent,
   ]
 })
-export class BookingModule { }
+export class PersonalDetailsModule { }

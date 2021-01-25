@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CityComponent } from './city.component';
+import { ConvictionsComponent } from './convictions.component';
 import { RouterModule } from '@angular/router';
-import { CITY_ROUTES } from './city.routes';
+import { ROUTES } from './convictions.routes';
 import { SharedLibModule } from 'shared-lib';
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forChild(CITY_ROUTES),
+    RouterModule.forChild(ROUTES),
     SharedLibModule,
   ],
   declarations: [
-    CityComponent,
+    ConvictionsComponent,
   ]
 })
-export class CityModule { }
+export class ConvictionsModule { }

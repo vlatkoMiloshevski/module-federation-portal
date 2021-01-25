@@ -14,40 +14,40 @@ export const APP_ROUTES: Routes = [
   // Your route here:
 
   {
-    path: 'flights',
+    path: 'convictions',
     loadChildren: () =>
       loadRemoteModule({
         remoteName: 'app1',
-        exposedModule: './FlightsModule'
+        exposedModule: './ConvictionsModule'
       })
-        .then(m => m.FlightsModule)
+        .then(m => m.ConvictionsModule)
   },
   {
-    path: 'booking',
+    path: 'claims',
     loadChildren: () =>
       loadRemoteModule({
         remoteName: 'app1',
-        exposedModule: './BookingModule'
+        exposedModule: './ClaimsModule'
       })
-        .then(m => m.BookingModule)
+        .then(m => m.ClaimsModule)
   },
   {
-    path: 'city',
+    path: 'personalDetails',
     loadChildren: () =>
       loadRemoteModule({
         remoteName: 'app2',
-        exposedModule: './CityModule'
+        exposedModule: './PersonalDetailsModule'
       })
-        .then(m => m.CityModule)
+        .then(m => m.PersonalDetailsModule)
   },
   {
-    path: 'country',
+    path: 'addonBundles',
     loadChildren: () =>
       loadRemoteModule({
         remoteName: 'app2',
-        exposedModule: './CountryModule'
+        exposedModule: './AddonBundlesModule'
       })
-        .then(m => m.CountryModule)
+        .then(m => m.AddonBundlesModule)
   },
 
   {

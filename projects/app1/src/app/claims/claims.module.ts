@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { COUNTRY_ROUTES } from './country.routes';
-import { CountryComponent } from './country.component';
+import { ROUTES } from './claims.routes';
+import { ClaimsComponent } from './claims.component';
 import { SharedLibModule } from 'shared-lib';
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forChild(COUNTRY_ROUTES),
+    RouterModule.forChild(ROUTES),
     SharedLibModule,
   ],
   declarations: [
-    CountryComponent
+    ClaimsComponent
   ]
 })
-export class CountryModule { }
+export class ClaimsModule { }
