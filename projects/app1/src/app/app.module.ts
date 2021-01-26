@@ -10,11 +10,11 @@ import { SharedLibModule } from 'shared-lib';
 
 @NgModule({
   imports: [
-    BrowserModule,
     SharedLibModule,
+    BrowserModule,
     ConvictionsModule,
     ClaimsModule,
-    RouterModule.forRoot(APP_ROUTES)
+    RouterModule.forRoot(APP_ROUTES),
   ],
   declarations: [
     HomeComponent,
@@ -22,7 +22,7 @@ import { SharedLibModule } from 'shared-lib';
   ],
   providers: [],
   bootstrap: [
-      AppComponent
-  ]
+    AppComponent
+  ],
 })
 export class AppModule { }

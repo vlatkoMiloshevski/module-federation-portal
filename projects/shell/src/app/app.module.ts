@@ -7,6 +7,9 @@ import { APP_ROUTES } from './app.routes';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SharedLibModule } from 'shared-lib';
 import { CommonModule } from '@angular/common';
+import { Subject } from 'rxjs';
+
+export const subject: Subject<any> = new Subject<any>();
 
 @NgModule({
   imports: [
@@ -17,7 +20,8 @@ import { CommonModule } from '@angular/common';
   ],
   declarations: [
     AppComponent,
-    NotFoundComponent
+    HomeComponent,
+    NotFoundComponent,
   ],
   entryComponents: [
     HomeComponent,
