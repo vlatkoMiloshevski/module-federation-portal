@@ -1,4 +1,6 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthLibComponent } from './auth/auth-lib.component';
 import { StoreService } from './custom-redux/store.service';
 import { TermsLibComponent } from './terms/terms-lib.component';
@@ -10,6 +12,9 @@ import { TermsLibComponent } from './terms/terms-lib.component';
     TermsLibComponent,
   ],
   imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [
     StoreService,

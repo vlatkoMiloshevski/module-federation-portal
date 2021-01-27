@@ -1,5 +1,20 @@
 <div id="container">
     <h1>Personal details</h1>
+
+    <table class="customers">
+        <thead>
+            <th>Name</th>
+            <th>City</th>
+            <th>Postcode</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{personalData?.name}}</td>
+                <td>{{personalData?.city}}</td>
+                <td>{{personalData?.postcode}}</td>
+            </tr>
+        </tbody>
+    </table>
     <br>
     <lib-terms-lib></lib-terms-lib>
 </div>

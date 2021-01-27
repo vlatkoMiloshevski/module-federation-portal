@@ -2,5 +2,17 @@
     Application Shell
 </h3>
 
+<h3>Selected customer: {{selectedCustomer?.name}}</h3>
+<table class="customers">
+    <thead>
+        <th>Name</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let customer of customerList" (click)="selectCustomer(customer.id)">
+            <td>{{customer.name}}</td>
+        </tr>
+    </tbody>
+</table>
+
 <br />
 <lib-terms-lib></lib-terms-lib>

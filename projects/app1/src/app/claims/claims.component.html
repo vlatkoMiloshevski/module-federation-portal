@@ -1,5 +1,18 @@
 <div id="container">
     <h1>Claims</h1>
+
+    <h3>Selected customer: {{selectedCustomer?.name}}</h3>
+    <table class="customers">
+        <thead>
+            <th>type</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let claim of claims">
+                <td>{{claim.name}}</td>
+            </tr>
+        </tbody>
+    </table>
+    
     <br>
     <lib-terms-lib></lib-terms-lib>
 </div>

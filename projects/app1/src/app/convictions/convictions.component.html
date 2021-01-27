@@ -1,5 +1,17 @@
 <div id="container">
     <h1>Convictions</h1>
+
+    <h3>Selected customer: {{selectedCustomer?.name}}</h3>
+    <table class="customers">
+        <thead>
+            <th>type</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let conviction of convictions">
+                <td>{{conviction.name}}</td>
+            </tr>
+        </tbody>
+    </table>
     <br>
     <lib-terms-lib></lib-terms-lib>
 </div>

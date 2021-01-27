@@ -8,6 +8,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { SharedLibModule } from 'shared-lib';
 import { CommonModule } from '@angular/common';
 import { Subject } from 'rxjs';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 export const subject: Subject<any> = new Subject<any>();
 
@@ -16,6 +17,9 @@ export const subject: Subject<any> = new Subject<any>();
     CommonModule,
     BrowserModule,
     SharedLibModule,
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserModule,
     RouterModule.forRoot(APP_ROUTES)
   ],
   declarations: [

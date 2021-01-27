@@ -2,7 +2,17 @@
     <img src="../../assets/angular.png" width="50">
 </div>
 
-<lib-auth-lib></lib-auth-lib>
+<h3>Selected customer: {{selectedCustomer?.name}}</h3>
+<table class="customers">
+    <thead>
+        <th>Name</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let customer of customerList" (click)="selectCustomer(customer.id)">
+            <td>{{customer.name}}</td>
+        </tr>
+    </tbody>
+</table>
 
 <p>
     <a routerLink="/personalDetails">Personal details</a>

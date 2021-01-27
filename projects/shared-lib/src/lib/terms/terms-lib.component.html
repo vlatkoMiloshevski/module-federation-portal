@@ -1,4 +1,4 @@
-<pre>shared state: {{isStateActive ? 'active' : 'inactive'}}</pre>
+<pre>shared state: {{(isStateActive$ | async)  ? 'active' : 'inactive'}}</pre>
 <button (click)="updateIsStateActive()">click to change</button>
 <br>
 
