@@ -1,13 +1,8 @@
 
 export interface IAppState {
-    theme: THEME;
-}
-
-export enum THEME {
-    bright,
-    dark,
+    isStateActive: boolean,
 }
 
 export const INITIAL_STATE: IAppState = {
-    theme: THEME.bright,
+    isStateActive: false,
 };

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Subject, Observable } from 'rxjs';
-import { IAppState, INITIAL_STATE, THEME } from './store.model';
+import { IAppState, INITIAL_STATE } from './store.model';
 
 @Injectable({
     providedIn: 'root',
@@ -25,13 +25,13 @@ export class StoreService {
         return this.appStateSubject.asObservable();
     }
 
-    public updateTheme(theme: THEME): void {
-        this.appState.theme = theme;
+    public updateIsStateActive(isStateActive: boolean): void {
+        this.appState.isStateActive = isStateActive;
         sessionStorage.setItem('appState', JSON.stringify(this.appState));
         this.appStateSubject.next(this.appState);
     }
 
-    public getTheme = (): THEME => this.getAppState().theme;
+    public getIsStateActive = (): boolean => this.getAppState().isStateActive;
 
     public getAppState(): IAppState {
         return JSON.parse(sessionStorage.getItem('appState'));
