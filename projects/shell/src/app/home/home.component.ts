@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { StoreService, PersonalData, Customer } from 'shared-lib';
+import { interval } from 'rxjs';
+import { first } from 'rxjs/operators';
+import { Customer, PersonalData, StoreService } from 'shared-lib';
 
 @Component({
   selector: 'app-home',
@@ -26,8 +28,10 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  selectCustomer(selectedCustomerId: number): void {
+  selectAndNavigate(route, selectedCustomerId): void {
     this.storeService.updateSelectedCustomer(selectedCustomerId);
-    this.router.navigate(['/personalDetails/personalDetails']);
+    interval().pipe(first()).subscribe(() => {
+      this.router.navigateByUrl(route);
+    });
   }
 }

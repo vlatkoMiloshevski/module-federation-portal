@@ -18,7 +18,7 @@ export class ClaimsComponent implements OnInit {
     this.storeService.getSelectedCustomerClaims().subscribe(claims => {
       this.claims = claims;
     });
-    
+
     this.storeService.getSelectedCustomer().subscribe(selectedCustomer => {
       this.selectedCustomer = selectedCustomer;
     });

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { StoreService, PersonalData } from 'shared-lib';
+import { StoreService, PersonalData, Customer } from 'shared-lib';
 
 @Component({
   selector: 'app-personal-details',
@@ -7,6 +7,7 @@ import { StoreService, PersonalData } from 'shared-lib';
 })
 export class PersonalDetailsComponent implements OnInit {
   personalData: PersonalData;
+  selectedCustomer: Customer;
 
   constructor(
     private storeService: StoreService,
@@ -16,6 +17,10 @@ export class PersonalDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.storeService.getSelectedCustomerPersonalData().subscribe(personalData => {
       this.personalData = personalData;
+    });
+
+    this.storeService.getSelectedCustomer().subscribe(selectedCustomer => {
+      this.selectedCustomer = selectedCustomer;
     });
   }
 }

@@ -1,23 +1,27 @@
 <div id="container">
-    <h1>Personal details</h1>
+    <h1>Personal Details</h1>
 
+    <h3>Selected customer: {{selectedCustomer?.name}}</h3>
     <table class="customers">
-        <thead>
-            <th>Name</th>
-            <th>City</th>
-            <th>Postcode</th>
-        </thead>
         <tbody>
             <tr>
+                <td>Name</td>
                 <td>{{personalData?.name}}</td>
+            </tr>
+            <tr>
+                <td>City</td>
                 <td>{{personalData?.city}}</td>
+            </tr>
+            <tr>
+                <td>Postcode</td>
                 <td>{{personalData?.postcode}}</td>
             </tr>
         </tbody>
     </table>
-    <br>
-    <lib-terms-lib></lib-terms-lib>
 </div>
 
 <br>
-<a routerLink="/">Home</a>
+<a routerLink="/">go home</a>
+<br>
+<br>
+<lib-terms-lib></lib-terms-lib>

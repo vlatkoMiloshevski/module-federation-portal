@@ -1,15 +1,24 @@
-<h3>
+<h1>
     Application Shell
-</h3>
+</h1>
 
 <h3>Selected customer: {{selectedCustomer?.name}}</h3>
 <table class="customers">
     <thead>
         <th>Name</th>
+        <th>Personal Details</th>
+        <th>Addon Bundles</th>
+        <th>Claims</th>
+        <th>Convictions</th>
     </thead>
     <tbody>
-        <tr *ngFor="let customer of customerList" (click)="selectCustomer(customer.id)">
+
+        <tr *ngFor="let customer of customerList">
             <td>{{customer.name}}</td>
+            <td (click)="selectAndNavigate('/personalDetails/personalDetails', customer.id)"><a>personal details</a></td>
+            <td (click)="selectAndNavigate('/addonBundles/addonBundles', customer.id)"><a>addon bundles</a></td>
+            <td (click)="selectAndNavigate('/claims/claims', customer.id)"><a>claims</a></td>
+            <td (click)="selectAndNavigate('/convictions/convictions', customer.id)"><a>convictions</a></td>
         </tr>
     </tbody>
 </table>

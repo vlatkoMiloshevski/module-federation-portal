@@ -1,22 +1,23 @@
 <div>
-    <img src="../../assets/angular.png" width="50">
+    <h1>Personal Details & Addons/Bundles</h1>
 </div>
 
 <h3>Selected customer: {{selectedCustomer?.name}}</h3>
 <table class="customers">
     <thead>
         <th>Name</th>
+        <th>Personal Details</th>
+        <th>Addon Bundles</th>
     </thead>
     <tbody>
-        <tr *ngFor="let customer of customerList" (click)="selectCustomer(customer.id)">
+
+        <tr *ngFor="let customer of customerList">
             <td>{{customer.name}}</td>
+            <td (click)="selectAndNavigate('/personalDetails', customer.id)"><a>personal details</a></td>
+            <td (click)="selectAndNavigate('/addonBundles', customer.id)"><a>addon bundles</a></td>
         </tr>
     </tbody>
 </table>
 
-<p>
-    <a routerLink="/personalDetails">Personal details</a>
-</p>
-<p>
-    <a routerLink="/addonBundles">Addons & bundles</a>
-</p>
+<br />
+<lib-terms-lib></lib-terms-lib>

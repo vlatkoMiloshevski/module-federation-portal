@@ -1,24 +1,27 @@
 <div id="container">
-    <h1>Addons & bundles</h1>
+    <h1>Addons/Bundles</h1>
 
     <h3>Selected customer: {{selectedCustomer?.name}}</h3>
     <table class="customers">
-        <thead>
-            <th>Basic</th>
-            <th>Medium</th>
-            <th>Premium</th>
-        </thead>
         <tbody>
             <tr>
-                <td>{{addonBundle===0}}</td>
-                <td>{{addonBundle===1}}</td>
-                <td>{{addonBundle===2}}</td>
+                <td>Basic</td>
+                <td>{{addonBundle===0 ? 'YES' : 'NO'}}</td>
+            </tr>
+            <tr>
+                <td>Medium</td>
+                <td>{{addonBundle===1 ? 'YES' : 'NO'}}</td>
+            </tr>
+            <tr>
+                <td>Premium</td>
+                <td>{{addonBundle===2 ? 'YES' : 'NO'}}</td>
             </tr>
         </tbody>
     </table>
-    <br>
-    <lib-terms-lib></lib-terms-lib>
 </div>
 
 <br>
-<a routerLink="/">Home</a>
+<a routerLink="/">go home</a>
+<br>
+<br>
+<lib-terms-lib></lib-terms-lib>

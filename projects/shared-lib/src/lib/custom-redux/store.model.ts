@@ -41,7 +41,7 @@ export const INITIAL_STATE: IAppState = {
     selectedCustomerId: 1,
     customers: [{
         id: 1,
-        name: 'Customer 1',
+        name: 'Customer X',
         city: 'London',
         postcode: 'ABC 123',
         claims: [{
@@ -62,9 +62,9 @@ export const INITIAL_STATE: IAppState = {
     },
     {
         id: 2,
-        name: 'Customer 2',
+        name: 'Customer Y',
         city: 'Liverpool',
-        postcode: 'ABC 123',
+        postcode: 'PSX 321',
         claims: [{
             name: 'claim 2',
         }, {
@@ -83,9 +83,9 @@ export const INITIAL_STATE: IAppState = {
     },
     {
         id: 3,
-        name: 'Customer 3',
+        name: 'Customer Z',
         city: 'Manchester',
-        postcode: 'ABC 123',
+        postcode: 'TSV 576',
         claims: [{
             name: 'claim 3',
         }, {

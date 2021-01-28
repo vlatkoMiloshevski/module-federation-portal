@@ -3,19 +3,16 @@
 
     <h3>Selected customer: {{selectedCustomer?.name}}</h3>
     <table class="customers">
-        <thead>
-            <th>type</th>
-        </thead>
         <tbody>
             <tr *ngFor="let claim of claims">
                 <td>{{claim.name}}</td>
             </tr>
         </tbody>
     </table>
-    
-    <br>
-    <lib-terms-lib></lib-terms-lib>
 </div>
 
 <br>
-<a routerLink="/">Home</a>
+<a routerLink="/">go home</a>    
+<br>
+<br>
+<lib-terms-lib></lib-terms-lib>
