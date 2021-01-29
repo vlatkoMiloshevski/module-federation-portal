@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject, Observable } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { StoreService } from '../custom-redux/store.service';
+import { StoreService } from '../store/store.service';
 
 @Component({
   selector: 'lib-terms-lib',

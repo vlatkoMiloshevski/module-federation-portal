@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthLibComponent } from './auth/auth-lib.component';
-import { StoreService } from './custom-redux/store.service';
+import { StoreService } from './store/store.service';
 import { TermsLibComponent } from './terms/terms-lib.component';
 
 
